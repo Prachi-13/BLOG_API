@@ -1,0 +1,29 @@
+"""{{app_name}} URL Configuration
+
+Add API endpoints urls here.
+"""
+from django.urls import path
+
+from {{app_name}}.views import {{class_name}}View
+
+routing_table_without_id = {
+
+    "GET": "get_all_{{plural_app_name}}",
+    "POST": "create_{{app_name}}"
+}
+routing_table_with_id = {
+    "GET": "get_single_{{app_name}}",
+    "PUT": "update_{{app_name}}"
+}
+
+urlpatterns = [
+    path(
+        '',
+        {{class_name}}View.as_view(
+            routing_table=routing_table_without_id),
+        name='{{app_name}}'),
+    path(
+        '/<resource_id>',
+        {{class_name}}View.as_view(
+            routing_table=routing_table_with_id),
+        name='{{app_name}}-id')]

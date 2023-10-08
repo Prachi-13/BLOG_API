@@ -1,0 +1,8 @@
+from django.contrib import admin
+
+# Register your models here.
+class {{camel_case_app_name}}Admin(admin.ModelAdmin):
+    list_display = []
+    list_filter = []
+    search_fields = []
+    

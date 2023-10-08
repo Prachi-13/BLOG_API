@@ -1,0 +1,19 @@
+from django.test import TestCase
+from django.contrib.auth import get_user_model
+from django.urls import reverse
+from rest_framework.test import APITestCase, APIClient
+from rest_framework_simplejwt.tokens import Token
+from {{app_name}}.api.views import views as {{app_name}}_views
+from rest_framework import status
+
+User = get_user_model() # return active user model in project
+
+
+# Create your tests here.
+class {{camel_case_app_name}}Tests(APITestCase):
+    
+    def test_{{app_name}}(self):
+        url = reverse({{app_name}}_views.{{camel_case_app_name}}View.name)
+        response = self.client.get(url, format='json')
+        assert response.status_code == status.HTTP_200_OK
+        

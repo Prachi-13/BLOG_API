@@ -1,0 +1,17 @@
+"""Model for {{app_name}}"""
+from framework.models import AbstractBaseModel
+from django.utils.translation import gettext_lazy as _
+
+
+class {{class_name}}(AbstractBaseModel):
+    """{{class_name}} of the connect application.
+         Write schema below.
+    """
+
+    default_error_messages = {
+        'invalid_id': _('{{single_resource_name}} does not exist')
+    }
+
+    class Meta:
+        app_label = '{{app_name}}'
+        db_table = '{{app_name}}'

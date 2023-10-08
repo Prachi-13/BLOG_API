@@ -1,0 +1,22 @@
+"""Class based view for {{app_name}}"""
+from django.db import transaction
+from {{app_name}}.models import {{class_name}}
+from {{app_name}}.serializers import {{class_name}}Serializer
+from utils.view_helpers import get_paginated_response, parse_single_id
+
+
+class {{class_name}}ListCreateAPIView(ListCreateAPIView):
+    """{{single_resource_name}} api endpoints."""
+    queryset = {{class_name}}.objects.all()
+    serializer_class = {{class_name}}Serializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    name = '{{app_name}}-list'
+
+
+class {{class_name}}RetrieveUpdateDestroyAPIView(RetrieveUpdateDestroyAPIView):
+    """{{single_resource_name}} api endpoints."""
+    queryset = {{class_name}}.objects.all()
+    serializer_class = {{class_name}}Serializer
+    permission_classes = [IsAuthenticatedOrReadOnly]
+    name = '{{app_name}}-detail'
+    
