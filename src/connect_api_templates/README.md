@@ -19,7 +19,7 @@ python manage.py generate_api api_name
 #### Getting the app running
 After running above command, a directory structure with the specified `api_name` would be created under project root.
 To use this app we need to do a couple more steps.  
-Add `api_name` in  `INSTALLED APPS` list under `syrasoft/settings/base`.  
+Add `api_name` in  `INSTALLED APPS` list under `settings/base`.  
 E.g :
 ```
 INSTALLED_APPS = ['api_name.apps.class_name']  
