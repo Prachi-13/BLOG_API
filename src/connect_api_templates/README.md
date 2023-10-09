@@ -27,7 +27,7 @@ INSTALLED_APPS = ['api_name.apps.class_name']
 **class_name** is  the name of the class ending with Config defined in apps.py under newly created directory.
 
 Next,  
-Import and add urls in `syrasoft/settings/urls.py`  
+Import and add urls in `settings/urls.py`  
 E.g:  
 ```
 from api_name import urls as new_api_name_urls  
